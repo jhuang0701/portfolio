@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body, #root {
+    @apply h-full w-full;
+  }
+}
+
+@layer components {
+  /* Custom component styles */
+}
