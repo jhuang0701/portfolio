@@ -1,4 +1,13 @@
-const techStack = ['Python', 'C++', 'Embedded C++', 'JavaScript', 'React', 'Verilog']
+const techStack = [
+    'Python',
+    'C++',
+    'Embedded C++',
+    'JavaScript',
+    'React',
+    'Verilog',
+    'MATLAB',
+    'Groq API / RAG',
+]
 
 export default function About() {
     return (
@@ -31,16 +40,27 @@ export default function About() {
                             ))}
                         </div>
 
-                        <a href="mailto:j664huan@uwaterloo.ca">
-                            <button className="mt-8 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105">
-                                Get In Touch
-                            </button>
-                        </a>
+                        <div className="flex flex-wrap gap-4 mt-8">
+                            <a href="mailto:j664huan@uwaterloo.ca">
+                                <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105">
+                                    Get In Touch
+                                </button>
+                            </a>
+                            <a href="/portfolio/Resume_JonathanHuang.pdf" download>
+                                <button className="border border-slate-700 hover:border-blue-500 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105">
+                                    Download CV
+                                </button>
+                            </a>
+                        </div>
                     </div>
 
                     <div className="flex justify-center">
-                        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-xl bg-gradient-to-br from-blue-500 to-slate-800 flex items-center justify-center">
-                            <span className="text-6xl font-bold text-white">JH</span>
+                        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-xl">
+                            <img
+                                src="/portfolio/headshot.jpg"
+                                alt="Jonathan Huang"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
                 </div>

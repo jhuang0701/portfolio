@@ -5,19 +5,19 @@ const companies = [
         name: 'S&C Electric Company',
         link: 'https://www.sandc.com/',
         role: 'Assistant QA Engineer',
-        description: 'Python automation, 60% faster retrieval',
+        description: 'Python automation, 60% faster retrieval, zero non-conformance escapes',
     },
     {
         name: 'WATBots',
         link: 'https://www.uwwatbots.com/',
         role: 'Electrical Subteam Lead',
-        description: 'Embedded firmware, 20+ engineers',
+        description: 'Embedded C++ firmware, ESP32/AM32 ESC control, 20+ engineers',
     },
     {
         name: 'Act First Safety',
         link: '#',
         role: 'Administrative Intern',
-        description: 'Data validation pipelines',
+        description: 'Excel macro validation pipelines, 2,000+ contracts',
     },
 ]
 

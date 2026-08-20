@@ -2,14 +2,14 @@ const projects = [
     {
         title: 'ChatTFT',
         description:
-            'Full-stack AI analytics platform integrating Llama 3.3 70B via Groq with a production RAG pipeline. 300+ users, Riot Games API approved.',
+            'AI analytics platform integrating Llama 3.3 70B via Groq with a production RAG pipeline over 10K+ chunks. Serves 300+ users, improved win rates 40%+, and is officially Riot Games API approved.',
         github: 'https://github.com/jhuang0701',
         liveDemo: 'https://chattft.streamlit.app',
     },
     {
         title: 'Warm Wheels',
         description:
-            'Embedded control system for a pulley-driven Hot Wheels launcher. Embedded C++ firmware with real-time state machine logic on Arduino.',
+            'Embedded control system for a pulley-driven Hot Wheels launcher. Embedded C++ firmware on an Arduino Uno Rev3 with real-time state machine logic for motor control synchronization.',
         github: 'https://github.com/jhuang0701',
         liveDemo: null,
     },
