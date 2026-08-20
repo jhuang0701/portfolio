@@ -1,10 +1,21 @@
-import Portfolio from './JonathanHuangPortfolio'
-import ErrorBoundary from './ErrorBoundary'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Experience from './components/Experience'
+import Projects from './components/Projects'
+import Footer from './components/Footer'
 
-export default function App() { 
-  return (
-    <ErrorBoundary>
-      <Portfolio />
-    </ErrorBoundary>
-  )
+function App() {
+    return (
+        <>
+            <Navbar />
+            <Hero />
+            <About />
+            <Experience />
+            <Projects />
+            <Footer />
+        </>
+    )
 }
+
+export default App
