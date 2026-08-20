@@ -17,7 +17,7 @@ const projects = [
     },
     {
         title: 'Warm Wheels',
-        image: '/portfolio/project-warmwheels.jpeg',
+        image: '/portfolio/project-warmwheels.png',
         description:
             'Embedded control system for a pulley-driven Hot Wheels launcher. Embedded C++ firmware on an Arduino Uno Rev3 with real-time state machine logic for motor control synchronization.',
         github: 'https://github.com/jhuang0701',
