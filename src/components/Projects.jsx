@@ -16,6 +16,14 @@ const projects = [
         liveDemo: null,
     },
     {
+        title: '3-Phase FOC BLDC Motor Driver with Onboard IMU',
+        image: '/portfolio/project-foc-motor-driver-2.png',
+        description:
+            "A 4-layer motor driver PCB designed in KiCad from schematic through DRC-clean layout, targeting a self-balancing single-wheel robot. Takes a 6S battery input (22.2V nominal) and drives a 3-phase BLDC motor via field-oriented control, with dual current-sensing (independent hardware overcurrent protection separate from the precision current feedback used in the FOC loop) and an onboard IMU for real-time balance control. Uses hardware dead-time PWM generation to drive all 6 gate signals independently, and isolates the MCU's analog supply rail from the digital supply to keep switching noise out of current-sense measurements. STM32G474RET6, DRV8353HRTAT gate driver, ICM-42688-P IMU (SPI), 15A continuous / 30A peak phase current.",
+        github: 'https://github.com/jhuang0701/Power-Reference-Board',
+        liveDemo: null,
+    },
+    {
         title: 'Warm Wheels',
         image: '/portfolio/project-warmwheels.png',
         description:
