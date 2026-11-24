@@ -3,7 +3,7 @@ import { useState } from 'react'
 const companies = [
     {
         name: 'Engineered Intelligence',
-        logo: null,
+        logo: '/portfolio/engineered-intelligence-logo.png',
         link: null,
         role: 'SDET Intern (Sep 2026 – Present)',
         description: 'Playwright/TypeScript E2E, CI run cut from ~36 to ~20 min, found a SQL injection',
