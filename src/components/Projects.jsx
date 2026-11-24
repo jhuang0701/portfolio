@@ -3,7 +3,7 @@ import { useState } from 'react'
 const projects = [
     {
         title: 'Acoustic Measurement Instrument',
-        image: null,
+        image: '/portfolio/project-acoustic-meter.jpg',
         tags: ['KiCad', 'ngspice', 'OPA2365', 'ESP32', 'Python HIL'],
         description:
             'A portable acoustic measurement instrument I designed and built: electret microphone bias network, OPA2365 preamp with four switchable gains, a 4th-order Sallen-Key anti-alias filter (-3 dB at 25.5 kHz) and an ESP32 ADC at 80 kSPS on a hand-routed 2-layer mixed-signal PCB. Root-caused an 8.6 dB response error to the ESP32 ADC swapping every sample pair; the fix brought the measured response within 0.37 dB of calculation through 25 kHz. A Python hardware-in-the-loop test sweeps the board from 1 to 55 kHz against a Monte Carlo tolerance band, and an end-to-end test on real sound tracked the inverse-square law (-5.46 dB per doubling vs -6.02 dB expected).',
