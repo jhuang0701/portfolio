@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const projects = [
     {
         title: 'Acoustic Measurement Instrument',
@@ -55,6 +57,69 @@ const projects = [
     },
 ]
 
+function ProjectCard({ project }) {
+    const [showPhoto, setShowPhoto] = useState(false)
+
+    return (
+        <div
+            className="group rounded-lg border border-slate-800 bg-slate-900/50 overflow-hidden hover:border-blue-500/50 transition-all duration-300"
+        >
+            {project.image && (
+                <div
+                    className={`overflow-hidden transition-all duration-500 ease-out max-h-0 opacity-0 [@media(hover:hover)]:group-hover:max-h-56 [@media(hover:hover)]:group-hover:opacity-100 ${
+                        showPhoto ? 'max-h-56 opacity-100' : ''
+                    }`}
+                >
+                    <img src={project.image} alt={project.title} className="w-full h-56 object-cover" loading="lazy" />
+                </div>
+            )}
+            <div className="p-6">
+                <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag) => (
+                        <span key={tag} className="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs">
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+                <p className="text-slate-400 mb-6">{project.description}</p>
+                <div className="flex flex-wrap gap-4">
+                    {project.github && (
+                        <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium text-white border border-slate-700 rounded-full px-4 py-2 hover:border-blue-500 transition-colors"
+                        >
+                            GitHub
+                        </a>
+                    )}
+                    {project.liveDemo && (
+                        <a
+                            href={project.liveDemo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium text-white bg-blue-500 rounded-full px-4 py-2 hover:bg-blue-600 transition-colors"
+                        >
+                            Live Demo
+                        </a>
+                    )}
+                    {project.image && (
+                        <button
+                            type="button"
+                            onClick={() => setShowPhoto((v) => !v)}
+                            aria-expanded={showPhoto}
+                            className="[@media(hover:hover)]:hidden text-sm font-medium text-slate-300 border border-slate-700 rounded-full px-4 py-2"
+                        >
+                            {showPhoto ? 'Hide photo' : 'Show photo'}
+                        </button>
+                    )}
+                </div>
+            </div>
+        </div>
+    )
+}
+
 export default function Projects() {
     return (
         <section id="projects" className="py-20">
@@ -64,59 +129,9 @@ export default function Projects() {
                     Analog front ends, PCBs, embedded firmware and the test software that proves they work.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
                     {projects.map((project) => (
-                        <div
-                            key={project.title}
-                            className="rounded-lg border border-slate-800 bg-slate-900/50 overflow-hidden hover:border-blue-500/50 transition-all duration-300"
-                        >
-                            {project.image ? (
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-48 object-cover"
-                                />
-                            ) : (
-                                <div className="w-full h-48 flex items-center justify-center bg-gradient-to-br from-blue-900/60 via-slate-900 to-slate-950">
-                                    <svg viewBox="0 0 120 40" className="w-40 text-blue-400/80" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                                        <path d="M0 20 Q10 2 20 20 T40 20 T60 20 T80 20 T100 20 T120 20" />
-                                    </svg>
-                                </div>
-                            )}
-                            <div className="p-6">
-                                <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {project.tags.map((tag) => (
-                                        <span key={tag} className="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs">
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-                                <p className="text-slate-400 mb-6">{project.description}</p>
-                                <div className="flex gap-4">
-                                    {project.github && (
-                                        <a
-                                            href={project.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-sm font-medium text-white border border-slate-700 rounded-full px-4 py-2 hover:border-blue-500 transition-colors"
-                                        >
-                                            GitHub
-                                        </a>
-                                    )}
-                                    {project.liveDemo && (
-                                        <a
-                                            href={project.liveDemo}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-sm font-medium text-white bg-blue-500 rounded-full px-4 py-2 hover:bg-blue-600 transition-colors"
-                                        >
-                                            Live Demo
-                                        </a>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
+                        <ProjectCard key={project.title} project={project} />
                     ))}
                 </div>
             </div>
