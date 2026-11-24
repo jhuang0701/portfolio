@@ -1,12 +1,16 @@
 const techStack = [
     'Python',
     'C++',
-    'Embedded C++',
-    'JavaScript',
-    'React',
+    'TypeScript',
+    'Playwright',
+    'KiCad',
+    'ngspice',
+    'STM32',
+    'ESP32',
     'Verilog',
     'MATLAB',
-    'Groq API / RAG',
+    'Oscilloscope',
+    'I2C / SPI / UART / CAN',
 ]
 
 export default function About() {
@@ -19,9 +23,11 @@ export default function About() {
                     <div>
                         <h3 className="text-2xl font-semibold mb-4 text-white">Electrical Engineering Student</h3>
                         <p className="text-slate-400 mb-6">
-                            I'm a second-year EE student at the University of Waterloo with a long-standing interest
-                            in power systems and renewable energy. I split my time between QA automation, embedded
-                            firmware, and leading the WATBots electrical subteam of 20+ engineers.
+                            I'm an Electrical Engineering student at the University of Waterloo (4.0 GPA, President's
+                            Scholarship of Distinction), currently on co-op as an SDET intern at Engineered Intelligence.
+                            On the hardware side I design analog front ends, PCBs and embedded firmware, and I lead the
+                            WATBots electrical subteam of 20+ engineers. On the software side I build the test automation
+                            that proves things work.
                         </p>
                         <p className="text-slate-400 mb-8">
                             Outside of engineering I'm usually playing chess (top 1% on chess.com), on a basketball
@@ -41,7 +47,7 @@ export default function About() {
                         </div>
 
                         <div className="flex flex-wrap gap-4 mt-8">
-                            <a href="mailto:j664huan@uwaterloo.ca">
+                            <a href="mailto:jonathanhuang.ee@gmail.com">
                                 <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105">
                                     Get In Touch
                                 </button>

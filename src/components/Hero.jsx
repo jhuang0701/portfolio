@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 
 const interests = [
-    'Power Systems',
+    'Analog Circuit Design',
+    'PCB Design',
     'Embedded Firmware',
-    'QA Automation',
-    'Machine Learning',
-    'Renewable Energy',
-    'Full Stack Development',
-    'Circuit Design',
+    'Hardware Testing',
+    'Test Automation',
+    'Power Electronics',
 ]
 
 export default function Hero() {
@@ -57,8 +56,10 @@ export default function Hero() {
             <div className="container mx-auto px-4 relative z-10 text-center">
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">Hi I&apos;m Jonathan</h1>
                 <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-                    Nice to meet you! I&apos;m a current Electrical Engineering student at the University of Waterloo.
+                    Electrical Engineering student at the University of Waterloo. I design and test hardware, and build the software that tests it.
                 </p>
+
+                <p className="text-base md:text-lg text-blue-300 mb-6">Looking for a May–Aug 2027 co-op in hardware, firmware, test or SDET</p>
 
                 <div className="text-xl md:text-2xl text-white mb-12">
                     <span>I&apos;m passionate about </span>
