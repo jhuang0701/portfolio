@@ -2,6 +2,13 @@ import { useState } from 'react'
 
 const companies = [
     {
+        name: 'Engineered Intelligence',
+        logo: '/portfolio/engineered-intelligence-logo.png',
+        link: null,
+        role: 'SDET Intern (Sep 2026 – Present)',
+        description: 'Playwright/TypeScript E2E, CI run cut from ~36 to ~20 min, found a SQL injection',
+    },
+    {
         name: 'S&C Electric Company',
         logo: '/portfolio/sc-electric-logo.png',
         link: 'https://www.sandc.com/',
@@ -13,7 +20,7 @@ const companies = [
         logo: '/portfolio/watbots-logo.png',
         link: 'https://www.uwwatbots.com/',
         role: 'Electrical Subteam Lead',
-        description: 'Embedded C++ firmware, ESP32/AM32 ESC control, 20+ engineers',
+        description: 'Led 20+ engineers, full electrical system, 41% lighter electronics',
     },
     {
         name: 'Act First Safety',
@@ -36,7 +43,7 @@ export default function Experience() {
                     {companies.map((company, index) => (
                         <a
                             key={company.name}
-                            href={company.link}
+                            href={company.link ?? undefined}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group relative"
@@ -49,11 +56,17 @@ export default function Experience() {
                                     hoveredIndex === index ? 'h-32 w-64 md:h-36 md:w-72 scale-110' : 'h-24 w-48 md:h-28 md:w-56'
                                 }`}
                             >
-                                <img
-                                    src={company.logo}
-                                    alt={company.name}
-                                    className="w-full h-full object-contain opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300 p-2"
-                                />
+                                {company.logo ? (
+                                    <img
+                                        src={company.logo}
+                                        alt={company.name}
+                                        className="w-full h-full object-contain opacity-60 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300 p-2"
+                                    />
+                                ) : (
+                                    <div className="w-full h-full flex items-center justify-center text-center text-lg md:text-xl font-bold text-slate-300 group-hover:text-white transition-colors">
+                                        {company.name}
+                                    </div>
+                                )}
                             </div>
 
                             <div

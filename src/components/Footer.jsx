@@ -41,7 +41,7 @@ export default function Footer() {
                             <Linkedin className="h-6 w-6" />
                             <span className="sr-only">LinkedIn</span>
                         </a>
-                        <a href="mailto:j664huan@uwaterloo.ca" className="text-slate-300 hover:text-blue-400 transition-colors">
+                        <a href="mailto:jonathanhuang.ee@gmail.com" className="text-slate-300 hover:text-blue-400 transition-colors">
                             <Mail className="h-6 w-6" />
                             <span className="sr-only">Email</span>
                         </a>
